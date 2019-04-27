@@ -1,0 +1,92 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Clientes</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/listagems/pessoal/listcliente']">Listagem de Clientes</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+
+        <P>Nome *</P>
+        <input type="text" [(ngModel)]="itemGravar.nomeItem" name="inputNome" class="form-control" placeholder="Nome"><br><br>
+
+        <p>Rua *</p>
+        <input type="text" [(ngModel)]="itemGravar.enderecoItem" name="inputEndereco" class="form-control" placeholder="Endereço"><br><br>
+
+        <p>Número da Casa *</p>
+        <input type="number" [(ngModel)]="itemGravar.numeroCasaItem" name="inputNumero" class="form-control" placeholder="Número"><br><br>
+
+        <p>Bairro *</p>
+        <input type="text" [(ngModel)]="itemGravar.bairroItem" name="inputBairro" class="form-control" placeholder="Bairro"><br><br>
+
+        <p>Cidade *</p>
+        <input type="text" [(ngModel)]="itemGravar.cidadeItem" name="inputCidade" class="form-control" placeholder="Cidade"><br><br>
+
+        <p>Estado *</p>
+        <select [(ngModel)]="itemGravar.estadoItem" name="salectEstado" class="form-control">
+          <option value=""selected>Selecionar</option>
+          <option value="AC">Acre (AC)</option>
+          <option value="AL">Alagoas (AL)</option>
+          <option value="AP">Amapá (AP)</option>
+          <option value="AM">Amazonas (AM)</option>
+          <option value="BA">Bahia (BA)</option>
+          <option value="CE">Ceará (CE)</option>
+          <option value="ES">Espírito Santo (ES)</option>
+          <option value="GO">Goiás (GO)</option>
+          <option value="MA">Maranhão (MA)</option>
+          <option value="MT">Mato Grosso (MT)</option>
+          <option value="MS">Mato Grosso do Sul (MS)</option>
+          <option value="MG">Minas Gerais (MG)</option>
+          <option value="PA">Pará (PA)</option>
+          <option value="PB">Paraíba (PB)</option>
+          <option value="PR">Paraná (PR)</option>
+          <option value="PE">Pernambuco (PE)</option>
+          <option value="PI">Piauí (PI)</option>
+          <option value="RJ">Rio de Janeiro (RJ)</option>
+          <option value="RN">Rio Grande do Norte (RN)</option>
+          <option value="RS">Rio Grande do Sul (RS)</option>
+          <option value="RO">Rondônia (RO)</option>
+          <option value="RR">Roraima (RR)</option>
+          <option value="SC">Santa Catarina (SC)</option>
+          <option value="SP">São Paulo (SP)</option>
+          <option value="SE">Sergipe (SE)</option>
+          <option value="TO">Tocantins (TO)</option>
+        </select><br><br>
+
+        <p>CEP *</p>
+        <input type="text" [(ngModel)]="itemGravar.cepItem" (keypress)="onCepKeyPress()" name="inputCep" class="form-control" placeholder="00.000.000" maxlength="10">
+
+        <p>Telefone *</p>
+        <input type="text" [(ngModel)]="itemGravar.telefoneItem" (keypress)="onTelefoneChange()" name="inputTelefone" class="form-control" placeholder="(00) 00000-0000" maxlength="15"><br><br>
+
+        <p>CPF *</p>
+        <input type="text" [(ngModel)]="itemGravar.cpfItem" (keypress)="onCpfKeyPress()" name="inputCpfCnpj" class="form-control" placeholder="000.000.000-00" maxlength="14"><br><br>
+
+        <p>Sexo *</p>
+        <select [(ngModel)]="itemGravar.sexoItem" name="inputSobrenome" class="form-control">
+          <option value="v" selected>Selecionar</option>
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+          <option value="O">Outro</option>
+        </select><br><br>
+
+        <p>Data de Nascimento *</p>
+        <input type="date" [(ngModel)]="itemGravar.nascimentoItem" name="inputDataNascimento" class="form-control"><br><br>
+
+        <p>E-mail *</p>
+        <input type="email" [(ngModel)]="itemGravar.emailItem" name="inputEmail" class="form-control" placeholder="E-mail"><br><br>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/pessoal/listcliente']">Listagem de Clientes</button>
+    &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/pessoal/listcliente']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

@@ -1,0 +1,26 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Marcas</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/listagems/produtos/listmarca']">Listagem de Marcas</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+
+        <p>Nome da Marca *</p>
+        <input type="text" class="form-control" name="inputNome" [(ngModel)]="nomeItem" placeholder="Nome da Marca" required><br><br>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/produtos/listmarca']">Listagem de Marcas</button>
+    &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/produtos/listmarca']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

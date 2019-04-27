@@ -1,0 +1,63 @@
+<div class="conteinerCentralizador" [@inicializaList]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Listagem de Produtos</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/cadastros/produtos/cadproduto']">Cadastro de Produtos</button>
+    </div>
+  </div>
+  <div class="corpoCadastro">
+    <div class="form-row">
+
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="main">Código</th>
+            <th class="main">Nome</th>
+            <th class="main">Nome Fornecedor</th>
+            <th class="main">Estoque</th>
+            <th class="main">Preço de Custo</th>
+            <th class="main">Preço de Venda</th>
+            <th class="main text-center">Ações</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="itemdoBanco.length == 0" class="table-hover">
+            <td scope="row"></td>
+            <td scope="row"></td>
+            <td scope="row"></td>
+            <td class="text-center" scope="row">Nada cadastrado!</td>
+            <td scope="row"></td>
+            <td scope="row"></td>
+            <td scope="row"></td>
+          </tr>
+          <tr *ngFor="let item of itemdoBanco" class="table-hover">
+            <td scope="row">{{ item.id }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.fornecedor.nome }}</td>
+            <td>{{ item.estoqueAtual }}</td>
+            <td>{{ item.precoCusto }}</td>
+            <td>{{ item.precoVenda }}</td>
+            <td>
+              <div class="text-center tamnhoCelula_300">
+                <button mat-stroked-button (click)="editarItem(item.id)">Editar</button>
+                &nbsp;
+                <button mat-raised-button color="warn" (click)="daletarItem(item.id)">Deletar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/cadastros/produtos/cadproduto']">Cadastro de Produtos</button>
+    &nbsp;
+  </div><br><br><br>
+</div>

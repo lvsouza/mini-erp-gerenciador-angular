@@ -1,0 +1,29 @@
+.conteinerCentralizador {
+    width: 70%;
+    margin: auto;
+    max-width: 700px;
+}
+
+p  {
+    color: rgb(153, 145, 145);
+    font-size: 100%;
+}
+
+h1 {
+    top: 10px;
+    left:40%;
+    position: relative;
+    color: rgb(153, 145, 145);  
+    font-family: verdana;
+    font-size: 100%;
+}
+
+.Salvar {
+    left: 5%;
+    position: relative;
+}
+
+.tab{
+    margin: auto;
+    position: relative;   
+}

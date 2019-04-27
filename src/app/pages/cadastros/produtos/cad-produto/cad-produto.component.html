@@ -1,0 +1,73 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Produtos</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button (click)="inicializaSelects()"><mat-icon>refresh</mat-icon></button>
+      <button mat-stroked-button [routerLink]="['/pages/listagems/produtos/listproduto']">Listagem de Produtos</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+
+        <P>Nome do Produto *</P>
+        <input type="text" name="inputNome" [(ngModel)]="itemGravar.nomeItem" class="form-control" placeholder="Nome do Produto"><br><br>
+        <P>Descrição</P>
+        <input type="text" name="inputDescricao" [(ngModel)]="itemGravar.descricaoItem" class="form-control" placeholder="Descrição"><br><br>
+        <P>Peça do produto *</P>
+        <select name="selectPeca" [(ngModel)]="itemGravar.pecaItem" class="form-control" required style="width: 90%;">
+            <option value="0" selected>Selecionar</option>
+            <option *ngFor="let item of resSelects.selectPeca" [value]="item.id">{{ item.nome }}</option>
+        </select>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/produtos/cadpeca" target="_blank"><mat-icon>add</mat-icon></a>
+        
+        <P>Marca *</P>
+        <select name="selectMarca" [(ngModel)]="itemGravar.marcaItem" class="form-control" required style="width: 90%;">
+            <option value="0" selected>Selecionar</option>
+            <option *ngFor="let item of resSelects.selectMarca" [value]="item.id">{{ item.nome }}</option>
+        </select>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/produtos/cadmarca" target="_blank"><mat-icon>add</mat-icon></a>
+
+        <P>Modelo *</P>
+        <select name="selectModelo" [(ngModel)]="itemGravar.modeloItem" class="form-control" required style="width: 90%;">
+          <option value="0" selected>Selecionar</option>
+          <option *ngFor="let item of resSelects.selectModelo" [value]="item.id">{{ item.nome }}</option>
+        </select>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/produtos/cadmodelo" target="_blank"><mat-icon>add</mat-icon></a>
+
+        <P>Categoria *</P>
+        <select name="selectCategoria" class="form-control" [(ngModel)]="itemGravar.categoriaItem" required style="width: 90%;">
+          <option value="0" selected>Selecionar</option>
+          <option *ngFor="let item of resSelects.selectCategoria" [value]="item.id">{{ item.nome }}</option>
+        </select>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/produtos/cadcategoria" target="_blank"><mat-icon>add</mat-icon></a>
+
+        <P>Fornecedor *</P>
+        <select name="selectFornecedor" class="form-control" [(ngModel)]="itemGravar.fornecedorItem" required style="width: 90%;">
+          <option value="0" selected>Selecionar</option>
+          <option *ngFor="let item of resSelects.selectFornecedor" [value]="item.id">{{ item.nome }}</option>
+        </select>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/pessoal/cadfornecedor" target="_blank"><mat-icon>add</mat-icon></a>
+
+        <P>Preço de Custo *</P>
+        <input type="number" name="inputCusto" (change)="revisaAutomacoes()" [(ngModel)]="itemGravar.precoCustoItem" class="form-control" placeholder="Preço de Custo"><br><br>
+        <P>Preço de Venda *</P>
+        <input type="number" name="inputVenda" (change)="revisaAutomacoes()" [(ngModel)]="itemGravar.precoVendaItem" class="form-control" placeholder="Preço de Venda"><br><br>
+        <P>Margem de Lucro por Peça *</P>
+        <input type="number" name="inputLucro" class="form-control" placeholder="Margem de Lucro" [(ngModel)]="itemGravar.margenLucroItem" readonly><br><br>
+        <P>Estoque *</P>
+        <input type="number" name="inputEstoque" class="form-control" placeholder="Estoque" [(ngModel)]="itemGravar.estoqueItem"><br><br>
+
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/produtos/listproduto']">Listagem de Produtos</button>
+    &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/produtos/listproduto']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

@@ -1,0 +1,81 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Vendas</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button (click)="inicializaSelects()"><mat-icon>refresh</mat-icon></button>
+      <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listvenda']">Listagem de Vendas</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+        <P>Vendedor *</P>
+        <select [(ngModel)]="item.selectVendedor" name="selectVendedor" class="form-control" style="width: 90%;">
+          <option value="0" selected>Selecionar</option>
+          <option *ngFor="let selec of resSelect.selectVendedores" [value]="selec.id" selected>{{ selec.nome }}</option>
+        </select><br><br>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/pessoal/cadfuncionario" target="_blank">
+          <mat-icon>add</mat-icon>
+        </a>
+
+        <P>Cliente *</P>
+        <select [(ngModel)]="item.selectCliente" name="selectCliente" class="form-control" style="width: 90%;">
+          <option value="0" selected>Selecionar</option>
+          <option *ngFor="let selec of resSelect.selectClientes" [value]="selec.id" selected>{{ selec.nome }}</option>
+        </select><br><br>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/pessoal/cadcliente" target="_blank">
+          <mat-icon>add</mat-icon>
+        </a>
+
+        <P>Lista de produtos *</P>
+        <div style="width: 100%;" *ngFor="let produts of item.selectProduto; let i = index;">
+
+          <button style="position: relative; float: right;" (click)="removeProduto(i)" color="warn" mat-stroked-button>
+            <mat-icon>remove</mat-icon>
+          </button>
+
+          <div style="position: relative; float: right; width: 80px; padding-right: 8px;">
+            <input type="number" [(ngModel)]="produts.qtdComprada" (change)="revisaValorTotal()" name="inputQTDComprada{{i}}" class="form-control"
+              placeholder="Quantidade Comprada" min="1">
+          </div>
+
+          <select style="width: 70%;" [(ngModel)]="produts.idProduto" (change)="revisaValorTotal()" name="selectFuncionario{{ i }}" class="form-control">
+            <option value="0" selected>Selecionar</option>
+            <option *ngFor="let item of resSelect.selectProdutos" [value]="item.id" selected>{{ item.nome }} ({{ item.estoqueAtual }} em estoque)</option>
+          </select><br>
+
+        </div>
+        <div style="width: 100%;">
+          <button mat-stroked-button style="position: relative; float: right;" (click)="adicionaProduto()" color="primary">
+            <mat-icon>add</mat-icon>
+          </button><br><br>
+        </div>
+
+        <div style="width: 100%; padding: 10px; background-color: #4b4b4d36; border-radius: 5px;">
+          <div style="position: relative; float: left; min-width: 100px; max-width: 150px; width: auto; padding: 10px;">
+            <P>Total sem desconto *</P>
+            <input type="number" [(ngModel)]="item.totalSemDesconto" (change)="revisaValorTotal()" name="inputTotalSemDesconto" class="form-control" min="0">
+          </div>
+          <div style="position: relative; float: left; min-width: 100px; max-width: 130px; width: auto; padding: 10px;">
+            <P>Porcentagem de Desconto</P>
+            <input type="number" [(ngModel)]="item.porcentagemDesconto" (change)="revisaValorTotal()" name="inputPorcentagemDesconto" class="form-control" min="0"
+              placeholder="Quantidade Comprada">
+          </div>
+          <div style="position: relative; float: right; min-width: 100px; max-width: 130px; width: auto; padding: 10px;">
+            <P>Total com Desconto *</P>
+            <input type="number" [(ngModel)]="item.totalComDesconto" name="inputTotalComDesconto" class="form-control" min="0"
+              placeholder="Quantidade Comprada">
+          </div>
+        </div><br><br>
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listvenda']">Listagem de Vendas</button>
+    &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/transacoes/listvenda']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

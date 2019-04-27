@@ -1,0 +1,107 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Funcionarios</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button (click)="inicializaSelects()"><mat-icon>refresh</mat-icon></button>
+      <button mat-stroked-button [routerLink]="['/pages/listagems/pessoal/listfuncionario']">Listagem de Funcionarios</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+
+        <P>Nome *</P>
+        <input type="text" [(ngModel)]="itemGravar.nomeItem" name="inputNome" class="form-control" placeholder="Nome"><br><br>
+
+        <p>Sexo *</p>
+        <select [(ngModel)]="itemGravar.sexoItem" name="inputSobrenome" class="form-control">
+          <option value="v" selected>Selecionar</option>
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+          <option value="O">Outro</option>
+        </select><br><br>
+
+        <p>Data de Nascimento *</p>
+        <input type="date" [(ngModel)]="itemGravar.nascimentoItem" name="inputDataNascimento" class="form-control"><br><br>
+
+        <p>Número da Casa*</p>
+        <input type="number" [(ngModel)]="itemGravar.numeroCasaItem" name="inputNumero" class="form-control"
+          placeholder="Número"><br><br>
+
+        <p>Rua *</p>
+        <input type="text" [(ngModel)]="itemGravar.enderecoItem" name="inputEndereco" class="form-control" placeholder="Rua"><br><br>
+
+        <p>Bairro *</p>
+        <input type="text" [(ngModel)]="itemGravar.bairroItem" name="inputBairro" class="form-control" placeholder="Bairro"><br><br>
+
+        <p>Cidade *</p>
+        <input type="text" [(ngModel)]="itemGravar.cidadeItem" name="inputCidade" class="form-control" placeholder="Cidade"><br><br>
+
+        <p>Estado *</p>
+        <select [(ngModel)]="itemGravar.estadoItem" name="salectEstado" class="form-control">
+          <option value="" selected>Selecionar</option>
+          <option value="AC">Acre (AC)</option>
+          <option value="AL">Alagoas (AL)</option>
+          <option value="AP">Amapá (AP)</option>
+          <option value="AM">Amazonas (AM)</option>
+          <option value="BA">Bahia (BA)</option>
+          <option value="CE">Ceará (CE)</option>
+          <option value="ES">Espírito Santo (ES)</option>
+          <option value="GO">Goiás (GO)</option>
+          <option value="MA">Maranhão (MA)</option>
+          <option value="MT">Mato Grosso (MT)</option>
+          <option value="MS">Mato Grosso do Sul (MS)</option>
+          <option value="MG">Minas Gerais (MG)</option>
+          <option value="PA">Pará (PA)</option>
+          <option value="PB">Paraíba (PB)</option>
+          <option value="PR">Paraná (PR)</option>
+          <option value="PE">Pernambuco (PE)</option>
+          <option value="PI">Piauí (PI)</option>
+          <option value="RJ">Rio de Janeiro (RJ)</option>
+          <option value="RN">Rio Grande do Norte (RN)</option>
+          <option value="RS">Rio Grande do Sul (RS)</option>
+          <option value="RO">Rondônia (RO)</option>
+          <option value="RR">Roraima (RR)</option>
+          <option value="SC">Santa Catarina (SC)</option>
+          <option value="SP">São Paulo (SP)</option>
+          <option value="SE">Sergipe (SE)</option>
+          <option value="TO">Tocantins (TO)</option>
+        </select><br><br>
+        
+        <p>Telefone *</p>
+        <input type="text" [(ngModel)]="itemGravar.telefoneItem" (keypress)="onTelefoneChange()" name="inputTelefone" class="form-control"
+          placeholder="(51) 00000-0000" minlength="0" maxlength="15"><br><br>
+
+        <p>E-mail *</p>
+        <input type="email" [(ngModel)]="itemGravar.emailItem" name="inputEmail" class="form-control" placeholder="E-mail"><br><br>
+
+        <p>Confirmar E-mail *</p>
+        <input type="email" [(ngModel)]="itemGravar.emailConfirmaItem" name="inputConfirEmail" class="form-control"
+          placeholder="Confirmar E-mail"><br><br>
+
+        <p>Salário *</p>
+        <input type="number" [(ngModel)]="itemGravar.salario" name="inputSalario" class="form-control" placeholder="Salário"
+          min="0"><br><br>
+
+        <p>Data de Admissão *</p>
+        <input type="date" [(ngModel)]="itemGravar.dataAdmissaoItem" name="inputDataAdmissao" class="form-control"><br><br>
+
+        <p>Cargo do Funcionário *</p>
+        <select [(ngModel)]="itemGravar.cargo" name="selectCargo" class="form-control" style="width: 90%;">
+          <option value="" selected>Selecionar</option>
+          <option *ngFor="let item of resSelects.selectCargo"  [value]="item.id" selected>{{ item.nome }}</option>
+        </select><br><br>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/pessoal/cadcargo" target="_blank"><mat-icon>add</mat-icon></a>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/pessoal/listfuncionario']">Listagem de Funcionarios</button>
+    &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/pessoal/listfuncionario']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

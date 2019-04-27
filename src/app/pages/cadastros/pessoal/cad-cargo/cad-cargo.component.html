@@ -1,0 +1,28 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Cargos</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/listagems/pessoal/listcargo']">Listagem de Cargos</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+
+        <P>Nome do Cargo *</P>
+        <input type="text" [(ngModel)]="item.nomeItem" name="inputNome" class="form-control" placeholder="Nome do Cargo"><br><br>
+
+        <P>Descrição do Cargo</P>
+        <input type="text" [(ngModel)]="item.descricaoItem" name="inputDescricao" class="form-control" placeholder="Descrição do Cargo"><br><br>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/pessoal/listcargo']">Listagem de Cargos</button> &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/pessoal/listcargo']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

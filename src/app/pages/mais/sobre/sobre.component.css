@@ -1,0 +1,38 @@
+body{
+    background-color: #eff4f7;
+}
+
+.quadro{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.extrabits{
+    text-align: center;
+    font-size: 60px;
+}
+
+.justify{
+    text-align: center;
+    margin: 25px;  
+}
+
+.grupo{
+    background-color: #fff;
+    height: 300px;
+}
+
+.cardtec{
+    background-color: #fff;
+    
+}
+
+.grupo:hover{
+    background-color: rgb(241, 240, 240);
+    transition: 1s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.margem{
+    margin-top: 5px;
+}

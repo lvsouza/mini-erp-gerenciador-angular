@@ -1,0 +1,278 @@
+<div class="backGround" style="background: #eeeeee; min-width: 880px" [@inicializaDash]>
+
+  <mat-tab-group mat-align-tabs="center" style="background: #eeeeee; margin: auto;">
+
+    <mat-tab label="Produtos">
+      <mat-grid-list cols="4" rowHeight="250px" rowWidth="200px">
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.produtos.produtos?.length }}</h1>
+              <p class="card-text">Produtos cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/produtos/cadproduto']">
+                  <mat-icon>add</mat-icon> <span>Novo Produto</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/produtos/listproduto']">
+                <!-- <button mat-stroked-button style="width: 100%;" (click)="gravaTeste()"> -->
+                  <mat-icon>list</mat-icon> <span>Lista de Produtos</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.produtos.marcas?.length }}</h1>
+              <p class="card-text">Marcas cadastradas</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/produtos/cadmarca']">
+                  <mat-icon>add</mat-icon> <span>Nova Marca</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/produtos/listmarca']">
+                  <mat-icon>list</mat-icon> <span>Lista de Marcas</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.produtos.modelos?.length }}</h1>
+              <p class="card-text">Modelos cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/produtos/cadmodelo']">
+                  <mat-icon>add</mat-icon> <span>Novo Modelo</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/produtos/listmodelo']">
+                  <mat-icon>list</mat-icon> <span>Lista de Modelos</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.produtos.categorias?.length }}</h1>
+              <p class="card-text">Categorias cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/produtos/cadcategoria']">
+                  <mat-icon>add</mat-icon> <span>Nova Categoria</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/produtos/listcategoria']">
+                  <mat-icon>list</mat-icon> <span>Lista de Categorias</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.produtos.pecas?.length }}</h1>
+              <p class="card-text">Pecas cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/produtos/cadpeca']">
+                  <mat-icon>add</mat-icon> <span>Nova Peca</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/produtos/listpeca']">
+                  <mat-icon>list</mat-icon> <span>Lista de Pecas</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </mat-tab>
+
+    <mat-tab label="Pessoas">
+      <mat-grid-list cols="4" rowHeight="250px" rowWidth="200px">
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.pessoas.clientes?.length }}</h1>
+              <p class="card-text">Clientes cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/pessoal/cadcliente']">
+                  <mat-icon>add</mat-icon> <span>Novo Cliente</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/pessoal/listcliente']">
+                  <mat-icon>list</mat-icon> <span>Lista de Clientes</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.pessoas.funcionarios?.length }}</h1>
+              <p class="card-text">Funcionarios cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/pessoal/cadfuncionario']">
+                  <mat-icon>add</mat-icon> <span>Novo Funcionario</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/pessoal/listfuncionario']">
+                  <mat-icon>list</mat-icon> <span>Lista de Funcionarios</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.pessoas.fornecedores?.length }}</h1>
+              <p class="card-text">Fornecedores cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/pessoal/cadfornecedor']">
+                  <mat-icon>add</mat-icon> <span>Novo Fornecedor</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/pessoal/listfornecedor']">
+                  <mat-icon>list</mat-icon> <span>Lista de Fornecedores</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.pessoas.cargos?.length }}</h1>
+              <p class="card-text">Cargos cadastrados</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/pessoal/cadcargo']">
+                  <mat-icon>add</mat-icon> <span>Novo Cargo</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/pessoal/listcargo']">
+                  <mat-icon>list</mat-icon> <span>Lista de Cargos</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </mat-tab>
+
+    <mat-tab label="Transações">
+      <mat-grid-list cols="4" rowHeight="250px" rowWidth="200px">
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.transacao.vendas?.length }}</h1>
+              <p class="card-text">Vendas</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/transacoes/cadvenda']">
+                  <mat-icon>add</mat-icon> <span>Nova Venda</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/transacoes/listvenda']">
+                  <mat-icon>list</mat-icon> <span>Lista de Vendas</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.transacao.comissoes?.length }}</h1>
+              <p class="card-text">Comissões/Bonificação</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/transacoes/cadcomissao']">
+                  <mat-icon>add</mat-icon> <span>Nova Comissão</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/transacoes/listcomissao']">
+                  <mat-icon>list</mat-icon> <span>Lista de Comissões</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.transacao.despGerais?.length }}</h1>
+              <p class="card-text">Despesas Gerais</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/transacoes/caddespesageral']">
+                  <mat-icon>add</mat-icon> <span>Nova Desp. Geral</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/transacoes/listdespesageral']">
+                  <mat-icon>list</mat-icon> <span>Lista de Desp. Gerais</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.transacao.despFuncionarios?.length }}</h1>
+              <p class="card-text">Despesas Funcionarios</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/transacoes/caddespesafuncionario']">
+                  <mat-icon>add</mat-icon> <span>Nova Desp. Funcionario</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/transacoes/listdespesafuncionario']">
+                  <mat-icon>list</mat-icon> <span>Lista de Desp. Func...</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="card" style="width: 15rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{ indicadoresStatus.transacao.despFornecedores?.length }}</h1>
+              <p class="card-text">Despesas Fornecedores</p>
+              <br>
+              <div class="btn-group-vertical btn-group-sm" role="group" aria-label="Basic example" style="width: 100%;">
+                <button mat-stroked-button color="primary" style="width: 100%;" [routerLink]="['/pages/cadastros/transacoes/caddespesafornecedor']">
+                  <mat-icon>add</mat-icon> <span>Nova Desp. Fornecedor</span>
+                </button>
+                <button mat-stroked-button style="width: 100%;" [routerLink]="['/pages/listagems/transacoes/listdespesafornecedor']">
+                  <mat-icon>list</mat-icon> <span>Lista de Desp. Forn...</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </mat-tab>
+
+  </mat-tab-group>
+
+</div>

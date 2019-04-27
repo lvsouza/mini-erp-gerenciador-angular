@@ -1,0 +1,51 @@
+<div class="conteinerCentralizador" [@inicializaList]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Listagem de Comissões/Bonificações</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/cadastros/transacoes/cadcomissao']">Cadastro de Comissões/Bonificações</button>
+    </div>
+  </div>
+  <div class="corpoCadastro">
+    <div class="form-row">
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th class="main">Código</th>
+            <th class="main">Nome</th>
+            <th class="main">QTD Vendas</th>
+            <th class="main">Valor das Vendas</th>
+            <th class="main">Comissão</th>
+            <th class="main">Valor da Comissão/Bonificação</th>
+            <th class="main text-center tamnhoCelula_300">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="itemdoBanco.length == 0" class="table-hover">
+            <td class="text-center" colspan="7" scope="row">Nada cadastrado!</td>
+          </tr>
+          <tr *ngFor="let item of itemdoBanco" class="table-hover">
+            <td scope="row">{{ item.id }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.qtdVendas }}</td>
+            <td>{{ item.valorVendas }}</td>
+            <td>{{ item.porcentoComissao }}%</td>
+            <td>{{ item.valorComissao }}</td>
+            <td>
+              <div class="text-center tamnhoCelula_300">
+                <button mat-stroked-button (click)="editarItem(item.id)">Editar</button>
+                &nbsp;
+                <button mat-raised-button color="warn" (click)="daletarItem(item.id)">Deletar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/cadastros/transacoes/cadcomissao']">Cadastro de Comissões/Bonificações</button> &nbsp;
+  </div><br><br><br>
+</div>

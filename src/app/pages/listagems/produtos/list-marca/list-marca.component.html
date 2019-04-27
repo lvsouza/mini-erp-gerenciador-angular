@@ -1,0 +1,45 @@
+<div class="conteinerCentralizador" [@inicializaList]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Listagem de Marcas</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/cadastros/produtos/cadmarca']">Cadastro de Marcas</button>
+    </div>
+  </div>
+  <div class="corpoCadastro container">
+    <div class="form-row">
+      <table class="table table-hover">
+
+        <thead>
+          <tr>
+            <th class="main">Código</th>
+            <th class="main">Nome</th>
+            <th class="main text-center tamnhoCelula_300">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="itemdoBanco.length == 0" class="table-hover">
+            <td scope="row"></td>
+            <td class="text-center" scope="row">Nada cadastrado!</td>
+            <td scope="row"></td>
+          </tr>
+          <tr *ngFor="let item of itemdoBanco" class="table-hover">
+            <td scope="row">{{ item.id }}</td>
+            <td>{{ item.nome }}</td>
+            <td>
+              <div class="text-center tamnhoCelula_300">
+                <button mat-stroked-button (click)="editarItem(item.id)">Editar</button>
+                &nbsp;
+                <button mat-raised-button color="warn" (click)="daletarItem(item.id)">Deletar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/cadastros/produtos/cadmarca']">Cadastro de Marcas</button> &nbsp;
+  </div><br><br><br>
+</div>

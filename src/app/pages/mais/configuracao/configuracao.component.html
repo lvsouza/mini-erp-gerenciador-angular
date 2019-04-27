@@ -1,0 +1,32 @@
+<div class="conteinerCentralizador" [@inicializaConfiguracao]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Configurações</h4>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+        <P>Nome de Usuário</P>
+        <input type="text" [(ngModel)]="itemGravar.nome" name="inputNome" class="form-control" placeholder="Nome de Usuário"><br><br>
+      </div>
+    </div>
+    <div style="position: relative; float: right;">
+      <button mat-raised-button color="primary" (click)="salvarUsuario()">Alterar Nome</button>
+    </div><br><br><br>
+  </form><br>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+        <P>Senha Atual</P>
+        <input type="password" [(ngModel)]="itemGravar.senhaAtual" name="inputSenhaAtual" class="form-control" placeholder="Digite a senha atual"><br><br>
+        <p>Nova Senha</p>
+        <input type="password" [(ngModel)]="itemGravar.senhaNova" name="inputSenhaNova" class="form-control" placeholder="Digite a nova senha"><br><br>
+        <p>Nova Senha Novamente</p>
+        <input type="password" [(ngModel)]="itemGravar.senhaNovaConfirmar" name="inputSenhaNovaConfirma" class="form-control" placeholder="Redigite a nova senha"><br><br>
+      </div>
+    </div>
+    <div style="position: relative; float: right;">
+      <button mat-raised-button color="primary" (click)="salvarSenha()">Alterar Senha</button>
+    </div><br><br><br>
+  </form><br>
+</div>

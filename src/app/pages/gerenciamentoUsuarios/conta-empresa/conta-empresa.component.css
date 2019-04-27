@@ -1,0 +1,75 @@
+
+.backGround {
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+.conteinerCentralizador {
+    width: 70%;
+    margin: auto;
+    min-width: 700px;
+}
+
+.img-thumbnail {
+    background-color: #f0f8ff00;
+    border: none;
+    
+}
+
+.wapp {
+padding-top: 50px;  
+padding-bottom: 100px;
+}
+p {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-weight: normal;
+}
+
+.img-logo{
+    top:0px;
+    
+    width: 20rem;
+    margin: auto;
+ }
+
+
+
+.btn-form {
+    top: 25px;
+    left: -30px;
+}
+
+.modal-title {
+    left: 30px;
+    top: 15px;
+    font-style: bold;
+}
+
+.centralizar {
+    left: -10px;
+    top: -14px;
+}
+
+ .formulario{
+     top:318;
+ }
+
+ .botao-edicao{
+    top:318;
+    right: -620px;
+ }
+/* 
+table, th, td {
+    border: 1px solid black;
+} */
+
+table {
+    padding: 10px;
+}
+
+
+.corpoCadastro {
+    width: 70%;
+    margin: auto;
+}

@@ -1,0 +1,254 @@
+<nav style="width: 100%; position: relative;" class="navbar colors-green-navbar">
+  <div>
+    <a mat-icon-button [routerLink]="['pages/dashboard']" class="fonteWhite">
+      <mat-icon>home</mat-icon>&nbsp;
+    </a>
+  </div>
+  <div class="nav colors-green-navbar justify-content-end">
+    <ul class="nav" style="margin: 5px;">
+
+      <!-- Bota de Produtos -->
+      <li class="nav-item">
+        <button mat-button [matMenuTriggerFor]="menuProdutos">Produtos</button>
+        <mat-menu class="background-menu" #menuProdutos="matMenu">
+          <button mat-menu-item [routerLink]="['pages/cadastros/produtos/cadproduto']">
+            <mat-icon class="fonteWhite">add</mat-icon>
+            <span>Novo Produto</span>
+          </button>
+
+          <!-- Botão aninhado dos Produtos -->
+          <button mat-menu-item [matMenuTriggerFor]="menuProdutosProdutos">
+            <mat-icon>shopping_cart</mat-icon> <span>Produtos</span>
+          </button>
+          <mat-menu class="background-menu" #menuProdutosProdutos="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/produtos/cadproduto']">
+              <mat-icon>add</mat-icon> <span>Novo Produto</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/produtos/listproduto']">
+              <mat-icon>list</mat-icon> <span>Lista de Produtos</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Marcas -->
+          <button mat-menu-item [matMenuTriggerFor]="menuProdutosMarcas">
+            <mat-icon>bookmarks</mat-icon> <span>Marcas</span>
+          </button>
+          <mat-menu class="background-menu" #menuProdutosMarcas="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/produtos/cadmarca']">
+              <mat-icon>add</mat-icon> <span>Nova Marca</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/produtos/listmarca']">
+              <mat-icon>list</mat-icon> <span>Lista de Marcas</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Categorias -->
+          <button mat-menu-item [matMenuTriggerFor]="menuProdutosCategorias">
+            <mat-icon>category</mat-icon> <span>Categorias de Produtos</span>
+          </button>
+          <mat-menu class="background-menu" #menuProdutosCategorias="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/produtos/cadcategoria']">
+              <mat-icon>add</mat-icon> <span>Nova Categoria</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/produtos/listcategoria']">
+              <mat-icon>list</mat-icon> <span>Lista de Categorias</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado de Pecas -->
+          <button mat-menu-item [matMenuTriggerFor]="menuProdutosPecas">
+            <mat-icon>extension</mat-icon> <span>Pecas</span>
+          </button>
+          <mat-menu class="background-menu" #menuProdutosPecas="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/produtos/cadpeca']">
+              <mat-icon>add</mat-icon> <span>Nova Peca</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/produtos/listpeca']">
+              <mat-icon>list</mat-icon> <span>Lista de Pecas</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Modelos de Produtos -->
+          <button mat-menu-item [matMenuTriggerFor]="menuProdutosModelos">
+            <mat-icon>donut_large</mat-icon> <span>Modelos de Produtos</span>
+          </button>
+          <mat-menu class="background-menu" #menuProdutosModelos="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/produtos/cadmodelo']">
+              <mat-icon>add</mat-icon> <span>Novo Modelo de Produto</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/produtos/listmodelo']">
+              <mat-icon>list</mat-icon> <span>Lista de Modelos de Produtos</span>
+            </button>
+          </mat-menu>
+        </mat-menu>
+      </li>
+
+      <!-- Botão de pessoas -->
+      <li class="nav-item">
+        <button mat-button [matMenuTriggerFor]="menuPessoas">Pessoas</button>
+        <mat-menu class="background-menu" #menuPessoas="matMenu">
+
+          <!-- Botão aninhado dos Clientes -->
+          <button mat-menu-item [matMenuTriggerFor]="menuPessoasClientes">
+            <mat-icon>person</mat-icon> <span>Clientes</span>
+          </button>
+          <mat-menu class="background-menu" #menuPessoasClientes="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/pessoal/cadcliente']">
+              <mat-icon>add</mat-icon> <span>Novo Cliente</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/pessoal/listcliente']">
+              <mat-icon>list</mat-icon> <span>Lista de Clientes</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos funcionarios -->
+          <button mat-menu-item [matMenuTriggerFor]="menuPessoasFuncionarios">
+            <mat-icon>people</mat-icon> <span>Funcionários</span>
+          </button>
+          <mat-menu class="background-menu" #menuPessoasFuncionarios="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/pessoal/cadfuncionario']">
+              <mat-icon>person_add</mat-icon> <span>Novo Funcionários</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/pessoal/listfuncionario']">
+              <mat-icon>list</mat-icon> <span>Lista de Funcionários</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Fornecedores -->
+          <button mat-menu-item [matMenuTriggerFor]="menuPessoasFornecedores">
+            <mat-icon>business_center</mat-icon> <span>Fornecedores</span>
+          </button>
+          <mat-menu class="background-menu" #menuPessoasFornecedores="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/pessoal/cadfornecedor']">
+              <mat-icon>add</mat-icon> <span>Novo Fornecedor</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/pessoal/listfornecedor']">
+              <mat-icon>list</mat-icon> <span>Lista de Fornecedores</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Cargos -->
+          <button mat-menu-item [matMenuTriggerFor]="menuPessoasCargos">
+            <mat-icon>business</mat-icon> <span>Cargos</span>
+          </button>
+          <mat-menu class="background-menu" #menuPessoasCargos="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/pessoal/cadcargo']">
+              <mat-icon>add</mat-icon> <span>Novo Cargo</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/pessoal/listcargo']">
+              <mat-icon>list</mat-icon> <span>Lista de Cargos</span>
+            </button>
+          </mat-menu>
+        </mat-menu>
+      </li>
+
+      <!-- Botão de Transações e despesas -->
+      <li class="nav-item">
+        <button mat-button [matMenuTriggerFor]="menuTransacoes">Transações</button>
+        <mat-menu class="background-menu" #menuTransacoes="matMenu">
+
+          <!-- Botão aninhado dos Vendas -->
+          <button mat-menu-item [matMenuTriggerFor]="menuTransacoesVendas">
+            <mat-icon>shopping_basket</mat-icon> <span>Vendas</span>
+          </button>
+          <mat-menu class="background-menu" #menuTransacoesVendas="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/transacoes/cadvenda']">
+              <mat-icon>add</mat-icon> <span>Nova Venda</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/transacoes/listvenda']">
+              <mat-icon>list</mat-icon> <span>Lista de Vendas</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Comissões -->
+          <button mat-menu-item [matMenuTriggerFor]="menuTransacoesComissoes">
+            <mat-icon>attach_money</mat-icon> <span>Comissões</span>
+          </button>
+          <mat-menu class="background-menu" #menuTransacoesComissoes="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/transacoes/cadcomissao']">
+              <mat-icon>add</mat-icon> <span>Nova Comissão</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/transacoes/listcomissao']">
+              <mat-icon>list</mat-icon> <span>Lista de Comissões</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Despesas Gerais -->
+          <button mat-menu-item [matMenuTriggerFor]="menuTransacoesDespesaGeral">
+            <mat-icon>crop_free</mat-icon> <span>Despesas Gerais</span>
+          </button>
+          <mat-menu class="background-menu" #menuTransacoesDespesaGeral="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/transacoes/caddespesageral']">
+              <mat-icon>add</mat-icon> <span>Nova Despesa Geral</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/transacoes/listdespesageral']">
+              <mat-icon>list</mat-icon> <span>Lista de Despesas Gerais</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Despesas de Funcionarios -->
+          <button mat-menu-item [matMenuTriggerFor]="menuTransacoesDespesasFuncionario">
+            <mat-icon>crop_din</mat-icon> <span>Despesas de Funcionarios</span>
+          </button>
+          <mat-menu class="background-menu" #menuTransacoesDespesasFuncionario="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/transacoes/caddespesafuncionario']">
+              <mat-icon>add</mat-icon> <span>Nova Despesa com Funcionario</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/transacoes/listdespesafuncionario']">
+              <mat-icon>list</mat-icon> <span>Lista de Despesas de Funcionarios</span>
+            </button>
+          </mat-menu>
+
+          <!-- Botão aninhado dos Despesas com Fornecedor -->
+          <button mat-menu-item [matMenuTriggerFor]="menuTransacoesDespesasFornecedor">
+            <mat-icon>card_membership</mat-icon> <span>Despesas com Fornecedores</span>
+          </button>
+          <mat-menu class="background-menu" #menuTransacoesDespesasFornecedor="matMenu">
+            <button mat-menu-item [routerLink]="['pages/cadastros/transacoes/caddespesafornecedor']">
+              <mat-icon>add</mat-icon> <span>Nova Despesa com Fornecedor</span>
+            </button>
+            <button mat-menu-item [routerLink]="['pages/listagems/transacoes/listdespesafornecedor']">
+              <mat-icon>list</mat-icon> <span>Lista de Despesas com Fornecedores</span>
+            </button>
+          </mat-menu>
+        </mat-menu>
+      </li>
+    </ul>
+    <div>
+
+      <button mat-icon-button [matMenuTriggerFor]="ActionBarMenu">
+        <img src="./assets/logoActionBar.png" style="width: 40px;" />
+      </button>
+      <mat-menu #ActionBarMenu="matMenu">
+        <div>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image">
+                <a [routerLink]="['pages/minhaconta']">
+                  <img src="./assets/baseline_account_circle_black_48dp.png" style="width: 48px;" />
+                </a>
+              </div>
+              <mat-card-title><a [routerLink]="['pages/minhaconta']"
+                  style="color: black; ">{{ informacoesLogin.Nome }}</a></mat-card-title>
+              <mat-card-subtitle><a [routerLink]="['pages/contaempresa']"
+                  style="color: gray; ">{{ informacoesLogin.NomeEmpresa }}</a></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions>
+              <button mat-button color="primary" [routerLink]="['pages/minhaconta']">Minha Conta</button>
+              <button mat-button color="warn" (click)="encerraLogin()">Sair</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div style="width:100%; box-shadow: 0px 0px 0px 0.2px gray"></div>
+        <button mat-menu-item [routerLink]="['pages/mais/configuracao']">
+          <mat-icon>settings</mat-icon>
+          <span>Configurações</span>
+        </button>
+        <button mat-menu-item [routerLink]="['pages/mais/sobre']">
+          <mat-icon>info</mat-icon>
+          <span>Sobre</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

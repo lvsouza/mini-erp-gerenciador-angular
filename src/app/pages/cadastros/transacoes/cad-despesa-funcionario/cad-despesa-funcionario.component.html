@@ -1,0 +1,41 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Despesas com Funcionários</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button (click)="inicializaSelects()"><mat-icon>refresh</mat-icon></button>
+      <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listdespesafuncionario']">Listagem de
+        Despesas com Funcionários</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row" style="width: 100%;">
+
+        <P>Nome *</P>
+        <input type="text" [(ngModel)]="itemGravar.nomeItem" name="inputNome" class="form-control" placeholder="Nome"><br><br>
+        <P>Valor *</P>
+        <input type="number" [(ngModel)]="itemGravar.valor" name="inputValor" class="form-control" placeholder="Valor"><br><br>
+        <P>Data *</P>
+        <input type="date" [(ngModel)]="itemGravar.data" name="inputData" class="form-control" placeholder="Valor de Venda"><br><br>
+        <P>Funcionário *</P>
+        <select [(ngModel)]="itemGravar.selectFuncionario" name="selectFuncionario" class="form-control" style="width: 90%;">
+          <option value="" selected>Selecionar</option>
+          <option *ngFor="let item of resSelect.selectFuncionario" [value]="item.id" selected>{{ item.nome }}</option>
+        </select><br><br>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/produtos/cadpeca" target="_blank"><mat-icon>add</mat-icon></a>
+
+        <P>Descrição</P>
+        <input type="text" [(ngModel)]="itemGravar.descricao" name="inputDescricao" class="form-control" placeholder="Descrição"><br><br>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listdespesafuncionario']">Listagem de
+      Despesas com Funcionários</button> &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/transacoes/listdespesafuncionario']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

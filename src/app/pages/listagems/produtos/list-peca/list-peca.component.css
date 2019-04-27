@@ -1,0 +1,67 @@
+.mesma-linha{ 
+    position: relative;
+    float: right;
+   /*  display: inline; */
+}
+
+.titulo{
+    display: inline;
+}
+
+
+.header{
+    margin: 10px;
+}
+
+.main{
+     background: #82ccdd;
+ }
+
+ .item-cor{
+    background:  #dfe6e9;
+}
+
+.fundo{
+    background: #DCDDDF;
+    height: 100%;
+}
+
+body{
+    background: #DCDDDF;
+    height: 100%;
+}
+
+.table-hover {
+    cursor: pointer;
+    background:  #ffffff;
+}
+
+.table-hover:hover {
+    background: #DCDDDF;
+}
+
+.table-hover:active {
+    background: rgb(235, 229, 229);
+}
+
+
+
+p {
+    margin: 0px;
+}
+
+.backGround {
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+.conteinerCentralizador {
+    width: 100%;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.corpoCadastro {
+    width: 100%;
+    margin: auto;
+}

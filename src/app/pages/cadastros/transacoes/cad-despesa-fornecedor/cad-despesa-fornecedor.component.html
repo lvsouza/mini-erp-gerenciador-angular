@@ -1,0 +1,38 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Despesas com Fornecedor</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button (click)="inicializaSelects()"><mat-icon>refresh</mat-icon></button>
+      <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listdespesafornecedor']">Listagem de Despesas com Fornecedor</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row" style="width: 100%;">
+
+        <P>Nome *</P>
+        <input type="text" [(ngModel)]="item.nomeItem" name="inputNome" class="form-control" placeholder="Nome"><br><br>
+        <P>Valor *</P>
+        <input type="number" [(ngModel)]="item.valor" name="inputValor" class="form-control" placeholder="Valor"><br><br>
+        <P>Data *</P>
+        <input type="date" [(ngModel)]="item.data" name="inputData" class="form-control" placeholder="Valor de Venda"><br><br>
+        <P>Fornecedor *</P>
+        <select [(ngModel)]="item.selectFornecedor" name="selectFornecedor" class="form-control" style="width: 90%;">
+          <option value="" selected>Selecionar</option>
+          <option *ngFor="let item of resSelect.selectFornecedor" [value]="item.id" selected>{{ item.nome }}</option>
+        </select><br><br>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/pessoal/cadfornecedor" target="_blank"><mat-icon>add</mat-icon></a>
+
+        <P>Descrição</P>
+        <input type="text" [(ngModel)]="item.descricao" name="inputDescricao" class="form-control" placeholder="Descrição"><br><br>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listdespesafornecedor']">Listagem de Despesas com Fornecedor</button> &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/transacoes/listdespesafornecedor']">Cancelar</button> &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

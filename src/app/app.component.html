@@ -1,0 +1,10 @@
+<!-- Barra de ações -->
+<div style="min-width: 500px;">
+  <app-action-bar *ngIf="estaLogado" style="position: relative; min-width: 700px;"></app-action-bar>
+</div>
+<mat-progress-bar *ngIf="loadBar" style="position: absolute;" mode="indeterminate"></mat-progress-bar>
+
+<!-- Direciona a saida de toda as paginas aqui -->
+<div class="backGround">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,1 @@
+export * from './cad-despesa-funcionario.component';

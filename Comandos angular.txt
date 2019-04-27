@@ -1,0 +1,8 @@
+C:\Users\cursotecnico01\AppData\Roaming\npm\ng serve
+C:\Users\cursotecnico01\AppData\Roaming\npm\ng serve --host 192.168.0.3 --port 7910 
+
+// Angular no pendrive 
+
+    -- Informatize
+G:\1_Lucas_Souza\Programas\Angular\ng serve
+G:\1_Lucas_Souza\Programas\Angular\ng serve --host 192.168.0.??? --port ????

@@ -1,0 +1,37 @@
+<div id="barraLogin" class="barraLogin">
+    <img class="img-logo-marca" src="assets/logo-marca-login.png">
+</div>
+
+<div class="login-box" cdkDrag>
+    <div style="height: 25px;" cdkDragHandle>
+        <h5 style="padding: 10px;">Faça Login</h5>
+        <svg></svg>
+    </div>
+    <div class="login-conteiner">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" (keyup.enter)="efetuarLogin()" [(ngModel)]="emailInput" [formControl]="emailFormControl" required>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Por favor coloque o seu endereço de Email.
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                O email é <strong>nescessário</strong>
+            </mat-error>
+            <button mat-button *ngIf="emailFormControl" matSuffix mat-icon-button aria-label="Limpar" (click)="emailInput=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" (keyup.enter)="efetuarLogin()" placeholder="Digite aqui a sua senha" [(ngModel)]="senhaInput" required>
+            <button mat-button *ngIf="senhaInput" matSuffix mat-icon-button aria-label="Limpar" (click)="senhaInput=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-progress-bar *ngIf="buttonOrProgress" mode="indeterminate"></mat-progress-bar>
+        <div *ngIf="!buttonOrProgress">
+            <div class="text-center" style="width: 100%;">
+                <button mat-button class="btn-success" (click)="efetuarLogin()">Logar-se</button>
+                <!-- <button mat-button  (click)="criarUsuario()">Criar usuário</button> -->
+            </div>
+        </div>
+    </div>
+</div>

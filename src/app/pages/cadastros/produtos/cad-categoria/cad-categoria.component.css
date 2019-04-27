@@ -1,0 +1,19 @@
+p {
+    margin: 0px;
+}
+
+.backGround {
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+.conteinerCentralizador {
+    width: 70%;
+    margin: auto;
+    max-width: 700px;
+}
+
+.corpoCadastro {
+    width: 70%;
+    margin: auto;
+}

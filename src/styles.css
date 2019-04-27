@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+
+    background-color: #eeeeee;
+}
+
+
+.colors-green-navbar {
+    /* background-color: #05dec6; */
+    background-color: #4B4B4D;
+    color: #eeeeee;
+}
+
+.alinhaDireita {
+    float: right;
+}
+
+.background-menu {
+    /* background: #05dec6cf; */
+    background: #fffffffa;
+    color: #eeeeee;
+}
+
+.fonteWhite {
+    color: white;
+}

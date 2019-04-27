@@ -1,0 +1,33 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Despesas Gerais</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listdespesageral']">Listagem de Despesas
+        Gerais</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row">
+
+        <P>Nome *</P>
+        <input type="text" [(ngModel)]="itemGravar.nomeItem" name="inputNome" class="form-control" placeholder="Nome"><br><br>
+        <P>Valor *</P>
+        <input type="number" [(ngModel)]="itemGravar.valor" name="inputValor" class="form-control" placeholder="Valor"><br><br>
+        <P>Data de Venda *</P>
+        <input type="date" [(ngModel)]="itemGravar.data" name="inputData" class="form-control" placeholder="Valor de Venda"><br><br>
+        <P>Descrição</P>
+        <input type="text" [(ngModel)]="itemGravar.descricao" name="inputDescricao" class="form-control" placeholder="Descrição"><br><br>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listdespesageral']">Listagem de Despesas
+      Gerais</button> &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/transacoes/listdespesageral']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>

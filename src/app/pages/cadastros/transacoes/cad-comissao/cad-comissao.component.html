@@ -1,0 +1,48 @@
+<div class="conteinerCentralizador" [@inicializaCad]>
+  <br>
+  <div style="height: 50px;">
+    <h4 style="display: inline;">Cadastro de Comissões/Bonificações</h4>
+    <div style="position: relative; float: right;">
+      <button mat-stroked-button (click)="inicializaSelects()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listcomissao']">Listagem de Comissões/Bonificações</button>
+    </div>
+  </div>
+  <form class="backGround">
+    <div class="corpoCadastro">
+      <div class="form-row" style="width: 100%;">
+
+        <P>Nome *</P>
+        <input type="text" [(ngModel)]="itemGravar.nomeItem" name="inputNome" class="form-control" placeholder="Nome"><br><br>
+        <P>Quantidade de Vendas *</P>
+        <input type="number" [(ngModel)]="itemGravar.qtdVendas" name="inputQtdVenda" class="form-control" placeholder="Quantidade de Vendas"><br><br>
+        <P>Valor de Venda *</P>
+        <input type="number" [(ngModel)]="itemGravar.valorVenda" name="inputValorVendas" class="form-control"
+          placeholder="Valor de Venda"><br><br>
+        <P>Porcentagem de Comissão/Bonificação *</P>
+        <input type="number" [(ngModel)]="itemGravar.porcentagemComissao" name="inputPorcentagemComissao" class="form-control"
+          placeholder="Porcentagem de Comissão"><br><br>
+        <P>Valor da Comissão/Bonificação *</P>
+        <input type="number" [(ngModel)]="itemGravar.valorComissao" name="inputValorComissao" class="form-control"
+          placeholder="Valor da Comissão"><br><br>
+        <P>Funcionário *</P>
+        <select [(ngModel)]="itemGravar.selectFuncionario" name="selectFuncionario" class="form-control" style="width: 90%;">
+          <option value="" selected>Selecionar</option>
+          <option *ngFor="let item of resSelect.selectFuncionario" [value]="item.id" selected>{{ item.nome }}</option>
+        </select>
+        <a mat-icon-button href="{{serverAtual}}/pages/cadastros/pessoal/cadfuncionario" target="_blank">
+          <mat-icon>add</mat-icon>
+        </a>
+
+      </div>
+    </div>
+  </form><br>
+  <div style="position: relative; float: right;">
+    <button mat-stroked-button [routerLink]="['/pages/listagems/transacoes/listcomissao']">Listagem de Comissões/Bonificações</button>
+    &nbsp;
+    <button mat-stroked-button color="warn" [routerLink]="['/pages/listagems/transacoes/listcomissao']">Cancelar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="salvarItem()">Salvar</button>
+  </div><br><br><br>
+</div>
