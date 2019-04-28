@@ -13,10 +13,10 @@ export class ConstantesService {
   public URI_GET_USERS_IN_OUTSYSTEMS = 'https://lucas-souza-dev.outsystemscloud.com/ApiErp/rest/UsersERP/getUsers';
 
   // Uri onde será feita a consulta.
-  //public URI = 'http://localhost:5001/api/'; //Com dotnet run
-  public URI = 'http://68.183.151.123:5001/api/'; //Com dotnet run no servidor
-  //public URI = 'http://192.168.16.29:5001/api/'; //Com dotnet run + ip | gvdasa
-  //public URI = 'https://localhost:44352/api/'; // Pelo vstudio
+  public URI = 'https://localhost:5001/api/'; // Com dotnet run
+  // public URI = 'http://68.183.151.123:5001/api/'; //Com dotnet run no servidor
+  // public URI = 'http://192.168.16.29:5001/api/'; //Com dotnet run + ip | gvdasa
+  // public URI = 'https://localhost:44352/api/'; // Pelo vstudio
 
   // Constantes com as urls auxiliares pre definidades
   public readonly PRODUTOS = {
@@ -44,7 +44,7 @@ export class ConstantesService {
     'COMISSAO': 'coutros/comissoes',
     'VENDA': 'coutros/vendas',
     'PRODUTO_LIGA_VENDA': 'coutros/produtovenda',
-    //'SERVIDOR_ATUAL': 'http://localhost:4200/#',
+    // 'SERVIDOR_ATUAL': 'http://localhost:4200/#',
     'SERVIDOR_ATUAL': 'http://www.lsouza.tech/Angular/erpLojaInformatica/#',
   };
 
@@ -209,7 +209,7 @@ export class ConstantesService {
       'AVISO_CAMPO_NOME_CAD_MARCA_MENOR3': 'O campo obrigatório \"Nome da Marca\" do cadastro precisa ser maior do que 3 caracteres!',
 
 
-      //'AVISO_CAMPO_CIDADE_CAD_FUN_MENOR10': 'O campo obrigatório \"Cidade\" do cadastro precisa ter um tamnho de 10 caracteres!',
+      // 'AVISO_CAMPO_CIDADE_CAD_FUN_MENOR10': 'O campo obrigatório \"Cidade\" do cadastro precisa ter um tamnho de 10 caracteres!',
 
     }
   };
